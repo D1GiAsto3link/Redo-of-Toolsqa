@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Suite" parallel="tests" thread-count="2">
+    <test name="Chrome Tests">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="org.toolsqa.Tests.LoginTest"/>
+            <class name="org.toolsqa.Tests.CartTest"/>
+            <class name="org.toolsqa.Tests.CheckoutTest"/>
+        </classes>
+    </test>
+    <test name="Edge Tests">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="org.toolsqa.Tests.LoginTest"/>
+            <class name="org.toolsqa.Tests.CartTest"/>
+            <class name="org.toolsqa.Tests.CheckoutTest"/>
+        </classes>
+    </test>
+</suite>
+
+
+
+
+
+
+
+
+
+
+
+<!--<suite name="Parallel Test Suite">
+    <test name="Tests" parallel="tests" thread-count="2">
+        <classes>
+            <class name="org.toolsqa.Tests.LoginTest" />
+            <class name="org.toolsqa.Tests.CartTest" />
+            <class name="org.toolsqa.Tests.CheckoutTest" />
+        </classes>
+    </test>
+</suite>
+
+
+
+
+        <class name="org.toolsqa.Tests.CartTest">
+                <methods>
+                    <include name="addToCartTest"/>
+                </methods>
+            </class>
+            <class name="org.toolsqa.Tests.CheckoutTest">
+                <methods>
+                    <include name="checkoutTest"/>
+                </methods>
+            </class>
+            <class name="org.toolsqa.Tests.LoginTest">
+                <methods>
+                    <include name="invalidLoginTest"/>
+                </methods>
+            </class>-->
