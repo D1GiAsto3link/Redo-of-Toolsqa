@@ -3,18 +3,19 @@
 <suite thread-count="2" parallel="tests" name="Failed suite [Command line suite]">
   <test thread-count="2" parallel="tests" name="Command line test(failed)">
     <classes>
-      <class name="org.toolsqa.Tests.CheckoutTest">
+      <class name="org.toolsqa.Tests.LoginTest">
         <methods>
           <include name="tearDown"/>
-          <include name="checkoutTest"/>
+          <include name="invalidLoginTest"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- org.toolsqa.Tests.CheckoutTest -->
+      </class> <!-- org.toolsqa.Tests.LoginTest -->
       <class name="org.toolsqa.Tests.CartTest">
         <methods>
-          <include name="addToCartTest"/>
           <include name="tearDown"/>
+          <include name="addToCartTest"/>
           <include name="setup"/>
+          <include name="addItemToCartTest"/>
         </methods>
       </class> <!-- org.toolsqa.Tests.CartTest -->
     </classes>

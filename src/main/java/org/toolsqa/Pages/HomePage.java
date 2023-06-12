@@ -7,7 +7,9 @@ public class HomePage extends BasePage{
     private By loginLink = By.cssSelector(".login");
 
     public HomePage(WebDriver driver) {
+
         super(driver);
+
     }
 
     public void clickLoginLink() {
