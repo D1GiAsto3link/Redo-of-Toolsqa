@@ -105,10 +105,10 @@ public class CartTest extends BaseTest{
 
         // Login
         HomePage homePage = new HomePage(driver);
-        homePage.clickLoginLink();
+        homePage.Dismiss();
 
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.login("validusername", "validpassword");
+        loginPage.InVlogin("validusername", "validpassword");
 
         // Add item to cart
         // Verify item in cart

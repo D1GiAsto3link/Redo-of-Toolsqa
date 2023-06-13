@@ -13,7 +13,7 @@ public class LoginPage extends BasePage{
         super(driver);
     }
 
-    public void login(String username, String password) {
+    public void InVlogin(String username, String password) {
         driver.findElement(usernameField).sendKeys(username);
         driver.findElement(passwordField).sendKeys(password);
         driver.findElement(loginButton).click();
