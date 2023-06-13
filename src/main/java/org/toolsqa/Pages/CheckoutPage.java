@@ -14,6 +14,7 @@ public class CheckoutPage extends BasePage{
     public void confirmOrder() {
         driver.findElement(confirmOrderButton).click();
         // Add more methods specific to the checkout page if needed
+
     }
 
 

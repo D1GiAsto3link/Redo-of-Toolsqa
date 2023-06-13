@@ -10,7 +10,16 @@ public class ConfirmationPage extends BasePage{
         super(driver);
         // Add methods to verify the confirmation message or any other relevant actions
     }
+
+    public void checkbox() throws InterruptedException {
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//*[@id=\"terms\"]")).click();
+
+        driver.findElement(By.xpath("//*[@id=\"place_order\"]")).click();
+    }
+
     public void logout() {
+
         driver.findElement(logoutButton).click();
     }
 }

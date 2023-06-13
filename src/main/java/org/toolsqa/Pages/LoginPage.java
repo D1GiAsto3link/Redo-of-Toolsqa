@@ -26,6 +26,19 @@ public class LoginPage extends BasePage{
     }
 
 
+    public void Loginagain() throws InterruptedException {
+        driver.findElement(By.id("username")).sendKeys("Samad-Aziz");
+
+        driver.findElement(By.id("password")).sendKeys("snqA2@Yztz5CxKp");
+
+        driver.findElement(By.name("login")).click();
+
+        Thread.sleep(2500);
+        driver.get("https://shop.demoqa.com/shop/");
+
+    }
+
+
 
 
 

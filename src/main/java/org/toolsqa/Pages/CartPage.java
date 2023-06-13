@@ -1,7 +1,13 @@
 package org.toolsqa.Pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.io.File;
+import java.io.IOException;
+import java.time.Duration;
 
 public class CartPage extends BasePage {
     private final By cartItems = By.cssSelector(".cart_item");
@@ -17,10 +23,13 @@ public class CartPage extends BasePage {
     }
 
     public void clickCheckoutButton() {
+
         driver.findElement(checkoutButton).click();
-    }
+
     // Add more methods specific to the cart page if needed
 
+
+}
 }
 
 
