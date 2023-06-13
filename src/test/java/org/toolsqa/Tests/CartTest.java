@@ -105,7 +105,7 @@ public class CartTest extends BaseTest{
 
         // Login
         HomePage homePage = new HomePage(driver);
-        homePage.Dismiss();
+        homePage.Dissclick();
 
         LoginPage loginPage = new LoginPage(driver);
         loginPage.InVlogin("validusername", "validpassword");

@@ -1,14 +1,20 @@
 package org.toolsqa.Pages;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.toolsqa.utils.ScreenshotUtils;
 
+
+
 public class BasePage {
 
     protected WebDriver driver;
-
+    ExtentReports extent = null;
 
     public BasePage(WebDriver driver) {
 
@@ -21,6 +27,16 @@ public class BasePage {
     }
 
     // methods for capturing screenshots
+    public void Screenshots(){
+
+        ExtentTest test = extent.createTest("MyFirstTest");
+// reference image saved to disk
+        test.fail(MediaEntityBuilder.createScreenCaptureFromPath("img.png").build());
+// base64
+        test.fail(MediaEntityBuilder.createScreenCaptureFromBase64String("base64").build());
+    }
+
+
     public String captureScreenshot() {
         try {
             return ScreenshotUtils.captureScreenshot(driver);
@@ -29,6 +45,24 @@ public class BasePage {
             return "";
         }
     }
+
+    // methods for capturing Logs
+    public void Logs(){
+        ExtentTest test = extent.createTest("MyFirstTest");
+        test.pass("Text details");
+        test.log(Status.PASS, "Text details");
+
+    }
+
+
+    public void Exceptions(){
+        Throwable t = new RuntimeException("A runtime exception");
+        ExtentTest test = extent.createTest("MyFirstTest");
+        test.fail(t);
+        test.log(Status.FAIL, t);
+
+    }
+
 
 }
 

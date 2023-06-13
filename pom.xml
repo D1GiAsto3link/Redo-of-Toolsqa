@@ -57,6 +57,14 @@
         <version>2.13.0</version>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/ru.yandex.qatools.ashot/ashot --><!--captures full page screenshots -->
+    <dependency>
+        <groupId>ru.yandex.qatools.ashot</groupId>
+        <artifactId>ashot</artifactId>
+        <version>1.5.4</version>
+
+    </dependency>
+
 
 
 
